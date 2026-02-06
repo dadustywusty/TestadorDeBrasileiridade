@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Brasileiro</title>
+    <title>Verificador Brasileiro</title>
 </head>
 <style>
     body {
@@ -15,6 +15,7 @@
      div#res {
         margin-top: 20px;
         color: rgb(48, 38, 129);
+        margin-bottom: 20px;
     }
     input {
         margin-top: 30px;
@@ -24,15 +25,18 @@
     button{
        margin-top: 20px;
        background-color: rgb(48, 38, 129);
-       color: rgb(255, 203, 0); 
+       color: rgb(255, 203, 0);
+       margin-bottom: 20px;
     }
 
     </style>
 <body>
-    <h1>Verificação de brasileridade</h1> 
-    <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMXI3cnlxN2hvOHpmMWRhcTJpcjAxdGZqZXA5M3VhMG0xNmFra25ycSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bIqdxoOVJ2oak/source.gif" alt="?"><br>
+    <header>
+        <h1>Verificação de Brasileridade</h1>
+    </header> 
+    <img src="bandeira do brasil ue.gif" alt="?"><br>
     <button onclick="darplay()">HINO NACIONAL</button><br>
-    <p1>Digite seu país de origem e irei dizer se você é ou não um brasileiro</p1>
+    <p1>Digite seu <strong>PAÍS</strong> de origem e irei dizer se você é ou não um brasileiro</p1><br>
     <input type="text" name="pais" id="txtpais">
     <input type="button" value="Deixa eu verificar" onclick="verificação()">
     <div id="res"></div>
@@ -46,11 +50,60 @@
         var res = document.querySelector("div#res")
         var pais = (p.value)
         let m = pais.toUpperCase()
-        res.innerHTML = `<p1><strong>${m}</strong>??? Então você não é Brasileiro. </p1>`
+         /* res.innerHTML = `<p1><strong>${m}</strong>??? Então você não é Brasileiro. </p1>`
         if (m == "BRASIL") {
             res.innerHTML = `Você é <strong>brasileiro</strong>!!!!!`
-        }  
-    }
+        }  */
+       switch (m) {
+        case "BRASIL":
+            res.innerHTML = `Você é <strong>brasileiro</strong>!!!!!`
+            break
+        case "BR":
+            res.innerHTML = "AQUI É BRASIL POHA"
+        case "BRAZIL":
+            res.innerHTML = `Brasileiro de verdade não escreve com <strong>Z</strong>`
+            break
+        case "AMERICA":
+            res.innerHTML = "unfortunately, america is not a country"
+        case "USA":
+            res.innerHTML = "WHATA FUCK IS A KILOMETER🦅🦅🦅"
+            break
+        case "UNITED STATES":
+            res.innerHTML = "Quem no mundo americano escreveria assim?"
+            break
+        case "CHINA":
+            res.innerHTML = "我非常喜欢鸡肉派"    
+            break
+        case "PORTUGAL":
+            res.innerHTML = "devolva meu ouro"
+            break
+        case "VENEZUELA":
+            res.innerHTML = "Cadê o maduro?"
+            break
+        case "ROBLOX": 
+            res.innerHTML = "queremos injustiça com o celta"
+            break
+        case "A":
+            res.innerHTML = "A de amor."
+            break
+        case "B":
+            res.innerHTML = "B de beijinho."
+            break
+        case "C":
+            res.innerHTML = "C de cala a boca pq eu não fiz com todas as letras."
+            break
+        case "D":
+            res.innerHTML = "PARA"
+            break
+        case "DUSTY":
+            res.innerHTML = "eu"
+            break
+        default:
+            res.innerHTML = `<p1><strong>${m}</strong>??? Então você não é Brasileiro. </p1>`
+            break
+       }
+       }
+    
     function darplay() {
         const audio = document.getElementById("som")
         audio.play() 
@@ -60,5 +113,4 @@
 
 </script>
 </html>
-
 
