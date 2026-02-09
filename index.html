@@ -76,10 +76,45 @@
         const br = document.getElementById("som")
         usa.pause()
         usa.currentTime = 0
-         /* res.innerHTML = `<p1><strong>${m}</strong>??? Então você não é Brasileiro. </p1>`
-        if (m == "BRASIL") {
-            res.innerHTML = `Você é <strong>brasileiro</strong>!!!!!`
-        }  */
+        
+            const estados = [
+        "ACRE",
+        "ALAGOAS",
+        "AMAPA",
+        "AMAZONAS",
+        "BAHIA",
+        "CEARA",
+        "DISTRITO FEDERAL",
+        "ESPIRITO SANTO",
+        "GOIAS",
+        "MARANHAO",
+        "MATO GROSSO",
+        "MATO GROSSO DO SUL",
+        "MINAS GERAIS",
+        "PARA",
+        "PARAIBA",
+        "PARANA",
+        "PERNAMBUCO",
+        "PIAUI",
+        "RIO DE JANEIRO",
+        "RIO GRANDE DO NORTE",
+        "RIO GRANDE DO SUL",
+        "RONDONIA",
+        "RORAIMA",
+        "SANTA CATARINA",
+        "SAO PAULO",
+        "SERGIPE",
+        "TOCANTINS"
+    ]
+
+    if (estados.includes(m)) {
+
+        res.innerHTML = "Eu pedi pra digitar o PAÍS seu animal (to falando de vc dave)"
+        return
+
+    }
+
+
        switch (m) {
         case "BRASIL":
             res.innerHTML = `Você é <strong>brasileiro</strong>!!!!!`
@@ -160,9 +195,22 @@
         case "2fort":
             res.innerHTML = "Madekoo sai da live"
             break
+        case "JAPÃO":
+            res.innerHTML = "Cadê o goku?"
+            break
+        case "PEDRA":
+            res.innerHTML = "Papel"
+            break
+        case "PAPEL":
+            res.innerHTML = "Tesoura"
+            break
+        case "TESOURA":
+            res.innerHTML = "Pedra"
+            break
         default:
             res.innerHTML = `<p1><strong>${m}</strong>??? Então você não é Brasileiro. </p1>`
             break
+        
        }
        }
     
@@ -203,5 +251,3 @@
 
 </script>
 </html>
-
-
